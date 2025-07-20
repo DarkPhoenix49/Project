@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Rave Web</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="login-screen">
+    <h2>Ingresa tu nombre</h2>
+    <input type="text" id="username" placeholder="Tu nombre">
+    <button id="enterChat">Entrar</button>
+  </div>
+
+  <div id="main-app" style="display: none;">
+    <h1>🎥 Fiesta de Video</h1>
+    <form id="uploadForm">
+      <input type="file" id="videoInput" accept="video/*">
+      <button type="submit">Subir video</button>
+    </form>
+
+    <video id="videoPlayer" controls></video>
+
+    <div class="chat">
+      <div id="messages"></div>
+      <input type="text" id="chatInput" placeholder="Escribe...">
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
